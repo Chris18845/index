@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Cloudflare Turnstile
+  </title>
+  <script async="" defer="" src="https://challenges.cloudflare.com/turnstile/v0/api.js">
+  </script>
+  <style>
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+  </style>
+ </head>
+ <body>
+  <form id="captcha-form" method="POST">
+   <div class="cf-turnstile" data-sitekey="0x4AAAAAABRsFMEfPIecoXzg">
+   </div>
+   <button type="submit">
+    Submit
+   </button>
+  </form>
+  <script type="text/javascript">
+   function recaptcha_callback() {
+          document.querySelector('form').submit()
+        }
+  </script>
+ </body>
+</html>
